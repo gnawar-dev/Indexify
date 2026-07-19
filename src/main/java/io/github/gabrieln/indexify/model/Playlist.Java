@@ -25,7 +25,16 @@ public class Playlist implements Song {
         this.playlistName = playlistName;
     }
 
+    public String getPlaylistName() {
+        return playlistName;
+    }
+
     public void setPath(string path) {
         this.path = path;
     }
+
+    public String getPath() {
+        return path;
+    }
+    
 }
