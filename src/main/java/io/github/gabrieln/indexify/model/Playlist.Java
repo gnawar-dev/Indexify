@@ -1,24 +1,23 @@
 package io.github.gabrieln.indexify.model;
 
-import java.io.File;
+import java.util.ArrayList;;
 
-public class Playlist implements Song {
+public class Playlist{
 
-    private Song song;
+    private ArrayList<Song> songs = new ArrayList<>();
     private String playlistName;
+    private String uri;
+    private String path;
     
-    public Playlist(Song song, String playlistName, String path) {
-        this.song = song;
-        this.playlistName = playlistName;
-        this.path = path;
+    public Playlist() {
     }
 
     public void setSong(Song song) {
-        this.song = song;
+        songs.add(song);
     }
 
-    public song getSong() {
-        return song;
+    public ArrayList<Song> getSong() {
+        return songs;
     }
 
     public void setPlaylistName(String playlistName) {
@@ -29,7 +28,15 @@ public class Playlist implements Song {
         return playlistName;
     }
 
-    public void setPath(string path) {
+    public void setUri(String uri) {
+        this.uri = uri;
+    }
+
+    public String getUri() {
+        return uri;
+    }
+    
+    public void setPath(String path) {
         this.path = path;
     }
 
